@@ -1,15 +1,29 @@
 {
   "name": "excerpts",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Excerpting text of given words or characters from HTML.",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/gnowoel/excerpts"
+  },
   "scripts": {
     "test": "NODE_ENV=test mocha"
+  },
+  "keywords": [
+    "excerpt",
+    "truncate",
+    "convert",
+    "html",
+    "text",
+    "words",
+    "characters"
+  ],
+  "dependencies": {
+    "downsize": "0.0.8",
+    "html-to-text": "^1.6.0"
   },
   "devDependencies": {
     "chai": "*",
     "mocha": "*"
-  },
-  "dependencies": {
-    "downsize": "0.0.8",
-    "html-to-text": "^1.6.0"
   }
 }
