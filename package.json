@@ -1,8 +1,15 @@
 {
   "name": "excerpts",
   "version": "0.0.0",
+  "scripts": {
+    "test": "NODE_ENV=test mocha"
+  },
   "devDependencies": {
     "chai": "*",
     "mocha": "*"
+  },
+  "dependencies": {
+    "downsize": "0.0.8",
+    "html-to-text": "^1.6.0"
   }
 }
