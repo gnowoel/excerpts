@@ -52,7 +52,7 @@ describe('excerpts', function() {
     done();
   });
 
-  it('should append elipses to an excerpt', function(done) {
+  it('should append ellipses to an excerpt by default', function(done) {
     var text = fs.readFileSync(path.join(__dirname, 'words.txt'), 'utf8');
     var excerpt = excerpts(html, { words: 10 });
 
@@ -62,7 +62,18 @@ describe('excerpts', function() {
     done();
   });
 
-  it('should omit trailing elipses for full text', function(done) {
+  it('should customize appendix', function(done) {
+    var text = fs.readFileSync(path.join(__dirname, 'append.txt'), 'utf8');
+    var excerpt = excerpts(html, { words: 10, append: ' >>' });
+
+    assert.equal(excerpt, text.trim());
+    assert.equal(/ >>$/.test(excerpt.trim()). true);
+
+    done();
+  });
+
+
+  it('should omit trailing ellipses for full text', function(done) {
     var text = fs.readFileSync(path.join(__dirname, 'full.txt'), 'utf8');
     var excerpt = excerpts(html, { words: 10000 });
 
