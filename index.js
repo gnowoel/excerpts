@@ -4,7 +4,7 @@ var htmlToText = require('html-to-text');
 function excerpts(html, opts) {
   opts = opts || {};
 
-  opts.append = opts.append || '...';
+  opts.append = opts.append == null ? '...' : opts.append;
 
   if (!opts.words && !opts.characters) {
     opts.words = 50;
