@@ -1,6 +1,6 @@
 {
   "name": "excerpts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Excerpting text of given words or characters from HTML.",
   "license": "MIT",
   "repository": {
