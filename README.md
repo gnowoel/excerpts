@@ -40,7 +40,7 @@ var text = excerpts(html, { characters: 10 });
 //=> Lorem ipsum dol...
 ```
 
-The `words` option takes precedence over the `characters` option. With missing option, 50 words would be extracted by default.
+The `words` option takes precedence over the `characters` option. By default, 50 words will be extracted when option missing.
 
 ### Appendix
 
@@ -49,12 +49,12 @@ The appendix can be customized with the `append` option:
 ```javascript
 var excerpts = require('excerpts');
 
-var text = excerpts(html, { words: 3, append: " >>" });
+var text = excerpts(html, { words: 3, append: ' >>' });
 
 //=> Lorem ipsum dolor >>
 ```
 
-The appendix won't appear when full text are extracted.
+The appendix won't appear when full text has been extracted.
 
 ## Tests
 
