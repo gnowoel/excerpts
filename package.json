@@ -19,8 +19,7 @@
     "characters"
   ],
   "dependencies": {
-    "downsize": "0.0.8",
-    "html-to-text": "^1.6.0"
+    "cheerio": "^0.20.0"
   },
   "devDependencies": {
     "chai": "*",

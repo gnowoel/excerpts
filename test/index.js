@@ -3,9 +3,9 @@ var path = require('path');
 var assert = require('chai').assert;
 var excerpts = require('..');
 
-var html = fs.readFileSync(path.join(__dirname, 'sample.html'), 'utf8');
+var html = fs.readFileSync(path.join(__dirname, 'snippet.html'), 'utf8');
 
-describe('excerpts', function() {
+describe('excerpts(html, opts)', function() {
   it('should extract 50 words by default', function(done) {
     var text = fs.readFileSync(path.join(__dirname, 'default.txt'), 'utf8');
     var excerpt = excerpts(html);
@@ -18,6 +18,15 @@ describe('excerpts', function() {
   it('should extract specified words', function(done) {
     var text = fs.readFileSync(path.join(__dirname, 'words.txt'), 'utf8');
     var excerpt = excerpts(html, { words: 10 });
+
+    assert.equal(excerpt, text.trim());
+
+    done();
+  });
+
+  it('should accept either number or string options', function(done) {
+    var text = fs.readFileSync(path.join(__dirname, 'words.txt'), 'utf8');
+    var excerpt = excerpts(html, { words: '10' });
 
     assert.equal(excerpt, text.trim());
 
